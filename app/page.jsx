@@ -9,8 +9,8 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.jsx</code>
+          Test OIDC Firebase Auth&nbsp;
+          <code className={styles.code}>firebase.google.com/docs/auth/web/openid-connect?hl=en</code>
         </p>
         <div>
           <a
@@ -32,17 +32,17 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+        <div className='gap-2'>
+          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-800 items-center justify-center rounded-full'>
+            Login
+          </button>
+
+          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-800 items-center justify-center rounded-full mt-3'>
+            Logout
+          </button>
         </div>
+        
+
       </div>
 
       <div className={styles.grid}>

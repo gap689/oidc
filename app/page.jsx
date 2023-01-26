@@ -10,7 +10,7 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Test OIDC Firebase Auth&nbsp;
-          <code className={styles.code}>firebase.google.com/docs/auth/web/openid-connect?hl=en</code>
+          {/* <code className={styles.code}>firebase.google.com/docs/auth/web/openid-connect?hl=en</code> */}
         </p>
         <div>
           <a
@@ -37,7 +37,7 @@ export default function Home() {
             Login
           </button>
 
-          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-800 items-center justify-center rounded-full mt-3'>
+          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-200 bg-gray-800 items-center justify-center rounded-full mt-3'>
             Logout
           </button>
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://firebase.google.com/docs/auth/web/openid-connect?authuser=0"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -56,24 +56,24 @@ export default function Home() {
             Docs <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+            Find in-depth information about Firebase OIDC Authentication.
           </p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://github.com/gap689/oidc"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
+            Template <span>-&gt;</span>
           </h2>
           <p className={inter.className}>Explore the Next.js 13 playground.</p>
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://oidc-steel.vercel.app/"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -82,7 +82,7 @@ export default function Home() {
             Deploy <span>-&gt;</span>
           </h2>
           <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Deployment site to visualize the work.
           </p>
         </a>
       </div>

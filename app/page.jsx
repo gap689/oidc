@@ -2,6 +2,14 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 
+import { OAuthProvider } from "firebase/auth";
+import { getAuth, signInWithRedirect } from "firebase/auth";
+
+const provider = new OAuthProvider('oidc.germanoidc');
+
+// const auth = getAuth();
+//signInWithRedirect(auth, provider);
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -31,19 +39,32 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
-        <div className='gap-2'>
-          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-800 items-center justify-center rounded-full'>
+      
+
+        <div className='flex w-full justify-center items-center'>
+        
+          <div className='flex flex-col gap-2'>
+          <div className='w-full text-lg font-semibold justify-center'>Inicie Sesión</div>
+          <label className='mt-3 text-gray-600'>open ID</label>
+            <input type="email" placeholder="email@monterrey.gob.mx" className='flex peer placeholder:text-sm h-11 py-2 outline-none invalid:border-pink-600 invalid:text-pink-600 w-full max-w-[400px] rounded-lg px-4'/>
+          
+            <p className='mt-1 invisible peer-invalid:visible text-pink-600 text-xs'>Porfavor ingrese un email válido</p>
+
+          <label htmlFor="" className=' text-gray-600'> password </label>
+            <input type="text" placeholder="" className='flex peer text-sm sm:text-base h-11 py-2 outline-none invalid:border-pink-600 invalid:text-pink-600 w-full max-w-[400px] rounded-lg px-4'/>
+          
+          <button className='flex w-full mt-3 h-10 px-4 border border-gray-500 text-slate-800 items-center justify-center rounded-full'>
             Login
           </button>
+          </div>
+          
 
-          <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-200 bg-gray-800 items-center justify-center rounded-full mt-3'>
+          {/* <button className='flex w-full h-10 px-4 border border-gray-500 text-slate-200 bg-gray-800 items-center justify-center rounded-full mt-3'>
             Logout
-          </button>
+          </button> */}
         </div>
         
 
-      </div>
 
       <div className={styles.grid}>
         <a
@@ -67,7 +88,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Template <span>-&gt;</span>
+            Github Template<span>-&gt;</span>
           </h2>
           <p className={inter.className}>Explore the Next.js 13 playground.</p>
         </a>

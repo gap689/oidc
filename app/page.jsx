@@ -86,19 +86,19 @@ export default function Home() {
       </div>
 
       <div className='flex w-full justify-center items-center mt-14 mb-10'>
-        <div className='flex w-full flex-col gap-2 items-center'>
-          <div className='flex w-full text-lg font-semibold justify-center'>Inicie Sesión</div>
+        <div className='flex w-full flex-col gap-2 items-center justify-center'>
+          <div className='flex w-full  text-lg font-semibold justify-center '>Inicie Sesión</div>
           {/* form */}
-          <form onSubmit={submitHandler}>
-            <label htmlFor='email' className='mt-3 text-gray-600'>open ID</label>
+          <form onSubmit={submitHandler} className="flex flex-col w-full  items-center ">
+            <label htmlFor='email' className='flex w-full max-w-[400px] mt-3 text-gray-600 p-2'>open ID</label>
               <input id="email" type="email" placeholder="email@monterrey.gob.mx" className='flex peer placeholder:text-sm h-11 py-2 outline-none invalid:border-pink-600 invalid:text-pink-600 w-full max-w-[400px] rounded-lg px-4'/>
             
             <p className='mt-1 invisible peer-invalid:visible text-pink-600 text-xs'>Porfavor ingrese un email válido</p>
 
-            <label htmlFor="password" className=' text-gray-600'> password </label>
+            <label htmlFor="password" className='flex w-full max-w-[400px] p-2 text-gray-600'> password </label>
               <input id="password" type="password" placeholder="" className='flex peer text-sm sm:text-base h-11 py-2 outline-none invalid:border-pink-600 invalid:text-pink-600 w-full max-w-[400px] rounded-lg px-4'/>
 
-              <input className='flex w-full mt-3 h-10 px-4 border border-gray-500 text-slate-700 items-center justify-center rounded-full max-w-[400px] disabled:opacity-60'
+              <input className='flex w-full mt-10 h-10 px-4 border border-gray-500 text-slate-700 items-center justify-center rounded-full max-w-[400px] disabled:opacity-60'
                 type="submit"
                 value="Login"
               />
